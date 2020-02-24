@@ -11,22 +11,18 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Canvas extends JFrame {
-	private final Color Background = Color.WHITE;
 
 	public Canvas() {
 		super("Välkommen till ritprogrammet!");
 
 		setLayout(new BorderLayout());
 		Rityta rityta = new Rityta();
-		// JPanel centerPanel = new JPanel();
 		JPanel eastPanel = new JPanel();
 		JPanel northPanel = new JPanel();
 		JPanel southPanel = new JPanel();
-		// centerPanel.setBackground(Background);
-		// centerPanel.add(rityta);
+
 		getContentPane().add(rityta);
-		// rityta.setVisible(true);
-		// getContentPane().add(centerPanel);
+
 		eastPanel.setLayout(new GridLayout(15, 15, 15, 0));
 		eastPanel.add(new JLabel("Färg"));
 		JButton buttonBlack = new JButton();

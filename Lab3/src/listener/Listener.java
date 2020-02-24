@@ -1,17 +1,24 @@
 package listener;
+
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
+import canvas.*;
 
 public class Listener implements MouseListener {
 
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		System.out.println("Vi klickade i komponenten! på " +
-				e.getX() + "," + e.getY());
+	private Rityta rityta;
+
+	public Listener(Rityta rityta) {
+		this.rityta = rityta;
 	}
 
 	@Override
+	public void mouseClicked(MouseEvent e) {
+		rityta.clickAt(e.getX(), e.getY());
+
+	}
+
+	@Override 
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
 
