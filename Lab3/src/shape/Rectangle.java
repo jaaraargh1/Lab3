@@ -3,7 +3,7 @@ package shape;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Shapex {
 
 	public Rectangle(int x, int y, Color currentColor, int width, int height) {
 		super(x,y, currentColor,width, height);

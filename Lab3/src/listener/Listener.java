@@ -15,10 +15,9 @@ public class Listener implements MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		rityta.clickAt(e.getX(), e.getY());
-
 	}
 
-	@Override 
+	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
 

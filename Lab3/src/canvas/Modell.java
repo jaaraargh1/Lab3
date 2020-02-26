@@ -14,32 +14,32 @@ import java.awt.Graphics;
 import shape.*;
 
 public class Modell extends JPanel {
-	private ArrayList<Shape> shapes;
+	private ArrayList<Shapex> shapes = new ArrayList<>();
 
 	public Modell() {
-		shapes = new ArrayList<Shape>();
+		shapes = new ArrayList<Shapex>();
 	}
 
-	public ArrayList<Shape> getShapes() {
+	public ArrayList<Shapex> getShapes() {
 		return this.shapes;
 	}
 
-	public void addShape(Shape shape) {
-		this.shapes.add(shape);
-
-	}
-
-	//public void createShape(int x, int y, Color currentColor, int width, int height) {
-
-//	}
-
-	public ArrayList<Shape> getListOfAllShapes() {
-		return this.shapes;
-	}
-
-	public void reset(Object ritModell) {
+	public void addShape(Shapex shape) {
+		shapes.add(shape);
 		repaint();
+	}
 
+	public void paint(Graphics g) {
+		for (Shapex s : shapes) {
+			s.paintComponent(g);
+		}
+
+	}
+
+
+
+	public void reset() {
+		this.shapes.clear();
 	}
 
 }
